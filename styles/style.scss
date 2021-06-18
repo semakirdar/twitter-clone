@@ -1,0 +1,376 @@
+body {
+  font-family: Arial;
+}
+
+.home-page {
+  display: none;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  font-size: 25px;
+
+  .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+
+    span {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .item {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+
+      .nav-icon {
+        color: $primary;
+      }
+
+      &.selected {
+        color: #22a2f2;
+
+      }
+    }
+  }
+
+}
+
+.content {
+  padding-top: 20px;
+
+  .user-profile {
+    position: relative;
+
+    img {
+      height: 120px;
+      object-fit: cover;
+    }
+
+    .user-info {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: absolute;
+      bottom: 80px;
+      width: 100%;
+      left: 0;
+
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+      }
+
+      .info-item {
+        background-color: white;
+        padding: 5px;
+        border-radius: 12px;
+        text-align: center;
+
+      }
+    }
+  }
+
+  .user-name {
+    text-align: center;
+    margin-top: 35px;
+  }
+
+  .username {
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .new-Tweet {
+    .card-body {
+
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        object-fit: cover;
+      }
+
+      textarea {
+        border: none;
+        resize: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .card-footer {
+      border-top: none;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        border: none;
+        border-radius: 10px;
+        font-size: 13px;
+        color: white;
+        background-color: $primary;
+      }
+
+      i {
+        margin-right: 10px;
+        color: $primary;
+      }
+    }
+
+  }
+
+  .peoples {
+    .people-refresh{
+      cursor: pointer;
+    }
+    .card {
+      padding: 20px;
+
+      h5 {
+        padding-bottom: 20px;
+      }
+
+      .people-item {
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          margin-right: 10px;
+        }
+
+        p {
+          margin: 0;
+          font-size: 14px;
+        }
+
+        h6 {
+          margin: 0;
+          font-weight: bold;
+          font-size: 15px;
+        }
+
+        button {
+          background-color: #efebeb;
+          color: $primary;
+          border-radius: 10px;
+          font-size: 13px;
+          padding: 0 15px;
+        }
+
+      }
+    }
+
+    .card-option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $primary;
+    }
+
+  }
+
+  .topics {
+    margin-top: 30px;
+
+    .card {
+      padding: 20px;
+
+      .topic-item {
+        padding-bottom: 10px;
+
+        h6 {
+          font-weight: bold;
+          margin: 0;
+        }
+
+        p {
+          margin: 0;
+          color: grey;
+        }
+      }
+
+      .card-title {
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        i {
+          color: $primary;
+        }
+      }
+
+      .card-option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $primary;
+      }
+    }
+
+  }
+
+  .tweets {
+    margin-top: 30px;
+
+    .card {
+      padding: 20px;
+
+      .tweet-item {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e2e2e2;
+        padding-bottom: 20px;
+        display: none;
+
+        .tweet-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            margin-right: 10px;
+          }
+
+          span {
+            margin-right: 10px;
+          }
+        }
+
+        .tweet-content {
+
+        }
+
+        .tweet-footer {
+          font-size: 18px;
+          padding-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .fav-icon {
+            color: #de1616;
+          }
+        }
+      }
+
+
+    }
+  }
+}
+
+.loginPage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    padding: 50px;
+    width: 400px;
+
+    input {
+
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      transition: all .2s ease;
+    }
+
+    button:hover {
+
+      background-color: #b4b3b3;
+    }
+  }
+}
+
+.registerPage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  .card {
+    padding: 50px;
+    width: 400px;
+
+    input {
+
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      transition: all .2s ease;
+    }
+
+    button:hover {
+
+      background-color: #b4b3b3;
+    }
+  }
+
+}
+
+.message {
+  text-align: center;
+  margin: 0 auto;
+  width: 400px;
+  background-color: #a0bae0;
+}
+
+.notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 30px;
+  background-color: lightcoral;
+  color: white;
+  display: none;
+}

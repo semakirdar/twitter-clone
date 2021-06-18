@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="styles/app.css" rel="stylesheet">
+    <link href="plugins/fontawesome/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="message" id="message">
+
+</div>
+
+<div class="loginPage" id="loginPage">
+    <div class="card text-center">
+        <h3>TWITTER LOGIN</h3>
+        <form  id="loginForm">
+            <input class="form-control" id="inputEmailLogin" placeholder="E-mail" name="email" >
+            <input class="form-control" id="passwordLogin" placeholder="Password" name="password">
+            <button  type="submit" class="form-control" id="btnLogin">Login</button>
+
+        </form>
+        <a href="#" class="mt-3" id="goRegister">Register</a>
+    </div>
+</div>
+<div class="registerPage" id="registerPage">
+    <div class="card text-center">
+        <h3>TWITTER REGISTER</h3>
+        <form id="registerForm">
+            <input class="form-control" id="inputEmailRegister" placeholder="E-mail" name="email">
+            <input class="form-control" id="inputNameRegister" placeholder="Name" name="name">
+            <input class="form-control" id="inputUserNameRegister" placeholder="User Name" name="username">
+            <input class="form-control" id="passwordRegister" placeholder="Password" name="password">
+            <input class="form-control" id="passwordAgainRegister" placeholder="PasswordAgain" name="password_confirmation">
+            <button type="submit" class="form-control" id="btnRegister">Register</button>
+        </form>
+
+        <a href="#" class="mt-3" id="goLogin">Login</a>
+    </div>
+
+</div>
+
+<div class="home-page" id="homePage">
+    <div class="navbar py-3">
+        <div class="container">
+            <div class="nav-item">
+                <div class="item">
+                    <i class="fab fa-twitter nav-icon"></i>
+                </div>
+
+            </div>
+            <div class="nav-item">
+                <div class="item selected">
+                    <i class="fas fa-home"></i>
+                    <span>inicio</span>
+                </div>
+                <div class="item">
+                    <i class="fas fa-hashtag"></i>
+                    <span>Explorar</span>
+                </div>
+                <div class="item ">
+                    <i class="fas fa-bookmark"></i>
+                    <span>Guardados</span>
+                </div>
+                <div class="item ">
+                    <i class="fas fa-bars"></i>
+                    <span>Listas</span>
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="item">
+                    <img src="images/user-img.jpeg">
+                </div>
+                <div class="item">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <div class="item">
+                    <i class="fas fa-sign-out-alt" id="logout"></i>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-3">
+                    <div class="user-profile" id="userInfo">
+                        <div class="card shadow">
+                            <img src="images/user-profile-img.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="user-info">
+                                    <div class="info-item">
+                                        <div>Following</div>
+                                        <div class="text-primary fw-bold" id="followingCount">0</div>
+                                    </div>
+                                    <div class=" image">
+                                        <img src="images/user-img.jpeg" id="userAvatar">
+                                    </div>
+                                    <div class="info-item">
+                                        <div>Followers</div>
+                                        <div class="text-primary fw-bold" id="followersCount">0</div>
+                                    </div>
+                                </div>
+
+                                <div class="user-name fw-bold" id="name">
+
+                                </div>
+
+                                <div class="text-muted username" id="username">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="topics">
+                        <div class="card shadow">
+                            <div class="card-title">
+                                <div>
+                                    TENDENCIAS
+                                </div>
+                                <div>
+                                    <i class="fas fa-cog "></i>
+                                </div>
+                            </div>
+                            <div class="topic-item">
+                                <h6>LoremIpsum</h6>
+                                <p>lorem</p>
+                            </div>
+                            <div class="topic-item">
+                                <h6>LoremIpsum</h6>
+                                <p>lorem</p>
+                            </div>
+                            <div class="topic-item">
+                                <h6>LoremIpsum</h6>
+                                <p>lorem</p>
+                            </div>
+                            <div class="topic-item">
+                                <h6>LoremIpsum</h6>
+                                <p>lorem</p>
+                            </div>
+                            <div class="card-option">
+                                <div>Monstrar mas</div>
+                                <div><i class="fas fa-angle-down"></i></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="new-Tweet">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-2">
+                                        <img src="images/user-img.jpeg">
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-8">
+                                        <textarea class="form-control" placeholder="Your tweet here" id="inputTweet"></textarea>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-2 text-end">
+                                        <i class="fas fa-spinner"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+
+                                <div>
+                                    <i class="fas fa-image"></i>
+                                    <i class="fas fa-gift"></i>
+                                    <i class="far fa-laugh"></i>
+                                </div>
+                                <div>
+                                    <button id="sendTweet">TWITTER</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweets">
+                        <div class="card shadow" id="tweets">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-3">
+                    <div class="peoples">
+                        <div class="card shadow">
+                            <div class="d-flex justify-content-between">
+                                <h5>PEOPLE</h5>
+                                <div class="people-refresh" id="peoplesRefresh">
+                                    <i class="fas fa-redo-alt"></i>
+                                </div>
+                            </div>
+                            <div id="peoples">
+
+                            </div>
+                            <div class="card-option">
+                                <div>Monstrar mas</div>
+                                <div><i class="fas fa-angle-down"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="notification" id="notification">
+
+</div>
+
+<div class="tweet-item" style="display: none;">
+    <div class="tweet-header mb-3">
+        <div>
+            <img src="images/tweets-img.jpeg" class="tweetUserAvatar">
+            <span class="fw-bold headerName">Roberta Gonzalez</span>
+            <span class="text-muted headerUserName">@robertita13</span>
+            <span class="text-muted">11 min</span>
+        </div>
+        <div>
+            <i class="fas fa-angle-down text-muted"></i>
+        </div>
+    </div>
+    <div class="tweet-content">
+        <p><span class="text-primary">#Lorem </span>ipsum dolor sit amet, consectetur
+            adipisicing elit. Animi aut beatae deleniti
+            esse eum hic impedit iste, nostrum nulla quidem ratione, recusandae
+            reprehenderit
+            sed similique sit tempora, temporibus voluptates! Quos.</p>
+    </div>
+    <div class="tweet-footer">
+        <div>
+            <i class="fas fa-comment"></i>
+        </div>
+        <div class="text-primary">
+            <i class="fas fa-retweet"></i>
+            <span>15</span>
+        </div>
+
+        <div class="fav-icon">
+            <i class="fas fa-heart"></i>
+            <span>10</span>
+        </div>
+        <div>
+            <i class="fas fa-download"></i>
+        </div>
+    </div>
+
+</div>
+<div class="people-item" style="display: none;">
+    <div class="item">
+        <div>
+            <img src="images/people-img.jpeg" class="peopleAvatar">
+        </div>
+        <div>
+            <h6 class="peopleName">LoremIpsum</h6>
+            <p class="peopleUsername text-muted">lorem</p>
+        </div>
+    </div>
+    <div class="item">
+        <button class="btn btn-outline-primary btn-follow">FOLLOW</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
