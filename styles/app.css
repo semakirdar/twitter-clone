@@ -10105,7 +10105,7 @@ body {
   justify-content: space-around;
   align-items: center;
   position: absolute;
-  bottom: 80px;
+  bottom: 130px;
   width: 100%;
   left: 0;
 }
@@ -10159,11 +10159,32 @@ body {
   margin-right: 10px;
   color: #08a8f3;
 }
+.content .peoples {
+  /*.loading{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }*/
+}
 .content .peoples .people-refresh {
   cursor: pointer;
 }
 .content .peoples .card {
   padding: 20px;
+  position: relative;
+}
+.content .peoples .card .loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }
 .content .peoples .card h5, .content .peoples .card .h5 {
   padding-bottom: 20px;
@@ -10272,8 +10293,8 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.content .tweets .card .tweet-item .tweet-footer .fav-icon {
-  color: #de1616;
+.content .tweets .card .tweet-item .tweet-footer .favIcon.active {
+  color: red;
 }
 
 .loginPage {
@@ -10338,6 +10359,24 @@ body {
   background-color: lightcoral;
   color: white;
   display: none;
+}
+
+.user-modal {
+  display: none;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 100px;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.user-modal .card {
+  padding: 30px;
+}
+.user-modal .card input {
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=app.css.map */

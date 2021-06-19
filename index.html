@@ -15,10 +15,10 @@
 <div class="loginPage" id="loginPage">
     <div class="card text-center">
         <h3>TWITTER LOGIN</h3>
-        <form  id="loginForm">
-            <input class="form-control" id="inputEmailLogin" placeholder="E-mail" name="email" >
+        <form id="loginForm">
+            <input class="form-control" id="inputEmailLogin" placeholder="E-mail" name="email">
             <input class="form-control" id="passwordLogin" placeholder="Password" name="password">
-            <button  type="submit" class="form-control" id="btnLogin">Login</button>
+            <button type="submit" class="form-control" id="btnLogin">Login</button>
 
         </form>
         <a href="#" class="mt-3" id="goRegister">Register</a>
@@ -32,13 +32,25 @@
             <input class="form-control" id="inputNameRegister" placeholder="Name" name="name">
             <input class="form-control" id="inputUserNameRegister" placeholder="User Name" name="username">
             <input class="form-control" id="passwordRegister" placeholder="Password" name="password">
-            <input class="form-control" id="passwordAgainRegister" placeholder="PasswordAgain" name="password_confirmation">
+            <input class="form-control" id="passwordAgainRegister" placeholder="PasswordAgain"
+                   name="password_confirmation">
             <button type="submit" class="form-control" id="btnRegister">Register</button>
         </form>
 
         <a href="#" class="mt-3" id="goLogin">Login</a>
     </div>
 
+</div>
+<div class="user-modal" id="userModal">
+    <form id="profilUpdate">
+    <div class="card">
+
+            <input placeholder="name" name="name">
+            <input placeholder="user name" name="username">
+            <input placeholder="bio" name="bio">
+            <button type="submit" id="modalUpdate">Update</button>
+    </div>
+    </form>
 </div>
 
 <div class="home-page" id="homePage">
@@ -112,9 +124,14 @@
                                 <div class="text-muted username" id="username">
 
                                 </div>
+                                <div class="user-bio text-center" id="bio">
+
+                                </div>
+                                <button class="float-end user-update" id="userUpdate">Update</button>
                             </div>
                         </div>
                     </div>
+
                     <div class="topics">
                         <div class="card shadow">
                             <div class="card-title">
@@ -159,7 +176,8 @@
                                         <img src="images/user-img.jpeg">
                                     </div>
                                     <div class="col-sm-12 col-md-12 col-lg-8">
-                                        <textarea class="form-control" placeholder="Your tweet here" id="inputTweet"></textarea>
+                                        <textarea class="form-control" placeholder="Your tweet here"
+                                                  id="inputTweet"></textarea>
                                     </div>
                                     <div class="col-sm-12 col-md-12 col-lg-2 text-end">
                                         <i class="fas fa-spinner"></i>
@@ -189,6 +207,11 @@
                 <div class="col-sm-12 col-md-12 col-lg-3">
                     <div class="peoples">
                         <div class="card shadow">
+                            <div class="loader" id="loader">
+                                <div class="spinner-border" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
                             <div class="d-flex justify-content-between">
                                 <h5>PEOPLE</h5>
                                 <div class="people-refresh" id="peoplesRefresh">
@@ -220,10 +243,16 @@
             <img src="images/tweets-img.jpeg" class="tweetUserAvatar">
             <span class="fw-bold headerName">Roberta Gonzalez</span>
             <span class="text-muted headerUserName">@robertita13</span>
-            <span class="text-muted">11 min</span>
+            <span class="text-muted headerTime">11 min</span>
         </div>
-        <div>
-            <i class="fas fa-angle-down text-muted"></i>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item tweet-delete" href="#">Delete</a></li>
+            </ul>
         </div>
     </div>
     <div class="tweet-content">
@@ -243,7 +272,7 @@
         </div>
 
         <div class="fav-icon">
-            <i class="fas fa-heart"></i>
+            <i class="far fa-heart favIcon"></i>
             <span>10</span>
         </div>
         <div>
@@ -265,9 +294,12 @@
     <div class="item">
         <button class="btn btn-outline-primary btn-follow">FOLLOW</button>
     </div>
+
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

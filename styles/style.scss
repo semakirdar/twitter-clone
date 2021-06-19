@@ -59,6 +59,16 @@ body {
   .user-profile {
     position: relative;
 
+
+    .card-body {
+      .modal-update {
+
+      }
+
+
+    }
+
+
     img {
       height: 120px;
       object-fit: cover;
@@ -69,9 +79,10 @@ body {
       justify-content: space-around;
       align-items: center;
       position: absolute;
-      bottom: 80px;
+      bottom: 130px;
       width: 100%;
       left: 0;
+
 
       img {
         width: 80px;
@@ -143,11 +154,34 @@ body {
   }
 
   .peoples {
-    .people-refresh{
+
+    .people-refresh {
       cursor: pointer;
     }
+
+    /*.loading{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }*/
     .card {
       padding: 20px;
+      position: relative;
+
+      .loader {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+
+      }
 
       h5 {
         padding-bottom: 20px;
@@ -285,8 +319,10 @@ body {
           justify-content: space-between;
           align-items: center;
 
-          .fav-icon {
-            color: #de1616;
+          .favIcon {
+            &.active {
+              color: red;
+            }
           }
         }
       }
@@ -297,6 +333,7 @@ body {
 }
 
 .loginPage {
+
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -373,4 +410,25 @@ body {
   background-color: lightcoral;
   color: white;
   display: none;
+}
+
+.user-modal {
+  display: none;
+  height: 500px;
+
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 100px;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .card {
+    padding: 30px;
+
+    input {
+      margin-bottom: 10px;
+    }
+  }
 }
